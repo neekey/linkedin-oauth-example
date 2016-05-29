@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript" src="//platform.linkedin.com/in.js">
+        api_key:   751s10fk1qchbz
+        onLoad:    onLogin
+        authorize: true
+        lang:      ch
+    </script>
+</head>
+<body>
+
+<button onclick="login()">LinkedIn</button>
+
+<div id="profile_linkedin"></div>
+<script>
+
+    function login(){
+        IN.User.authorize(function(){
+            console.log( 'login finished', arguments );
+        });
+    }
+
+    function onLogin(){
+        console.log( 'on login', arguments );
+    }
+
+</script>
+
+</body>
+</html>
